@@ -4,6 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>المدى نت</title>
+<meta name="description" content="بوابة كروت الإنترنت">
+<meta name="theme-color" content="#0072ff">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="المدى نت">
+<link rel="manifest" href="data:application/json,{%22name%22:%22%D8%A7%D9%84%D9%85%D8%AF%D9%89%20%D9%86%D8%AA%22,%22short_name%22:%22%D8%A7%D9%84%D9%85%D8%AF%D9%89%20%D9%86%D8%AA%22,%22description%22:%22%D8%A8%D9%88%D8%A7%D8%A8%D8%A9%20%D9%83%D8%B1%D9%88%D8%AA%20%D8%A7%D9%84%D8%A5%D9%86%D8%AA%D8%B1%D9%86%D8%AA%22,%22start_url%22:%22/ALMADA1/%22,%22scope%22:%22/ALMADA1/%22,%22display%22:%22standalone%22,%22orientation%22:%22portrait%22,%22background_color%22:%22#070b14%22,%22theme_color%22:%22#0072ff%22,%22lang%22:%22ar%22,%22dir%22:%22rtl%22,%22icons%22:[{%22src%22:%22icon-192.png%22,%22sizes%22:%22192x192%22,%22type%22:%22image/png%22,%22purpose%22:%22any%20maskable%22},{%22src%22:%22icon-512.png%22,%22sizes%22:%22512x512%22,%22type%22:%22image/png%22,%22purpose%22:%22any%20maskable%22}],%22categories%22:[%22business%22,%22finance%22]}">
+<script>
+// Also create manifest as blob for better PWA support
+const manifestData = {
+  "name": "المدى نت",
+  "short_name": "المدى نت", 
+  "description": "بوابة كروت الإنترنت",
+  "start_url": "/ALMADA1/",
+  "scope": "/ALMADA1/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#070b14",
+  "theme_color": "#0072ff",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ],
+  "categories": ["business", "finance"]
+};
+const blob = new Blob([JSON.stringify(manifestData)], {type:'application/json'});
+const manifestURL = URL.createObjectURL(blob);
+const link = document.querySelector('link[rel="manifest"]');
+if(link) link.href = manifestURL;
+</script>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#070b14">
