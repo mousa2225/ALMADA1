@@ -2,7 +2,8 @@
   "name": "المدى نت",
   "short_name": "المدى نت",
   "description": "بوابة كروت الإنترنت",
-  "start_url": "/",
+  "start_url": "/ALMADA1/",
+  "scope": "/ALMADA1/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#070b14",
@@ -23,20 +24,5 @@
       "purpose": "any maskable"
     }
   ],
-  "screenshots": [
-    {
-      "src": "screenshot.png",
-      "sizes": "1080x1920",
-      "type": "image/png",
-      "form_factor": "narrow"
-    }
-  ],
-  "categories": ["business", "finance"],
-  "shortcuts": [
-    {
-      "name": "شحن رصيد",
-      "url": "/?action=recharge",
-      "description": "شحن رصيد مباشرة"
-    }
-  ]
+  "categories": ["business", "finance"]
 }
